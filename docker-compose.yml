@@ -1,0 +1,29 @@
+services:
+  tg-php-bot:
+    build: .
+    container_name: tg-php-bot
+    restart: unless-stopped
+    init: true
+    env_file: .env
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    volumes:
+      - ./menus.json:/app/menus.json:ro
+      - ./data:/app/data
+      - ./media:/app/media:ro
+
+  tg-php-admin:
+    build: .
+    container_name: tg-php-admin
+    restart: unless-stopped
+    init: true
+    env_file: .env
+    command: ["php", "-S", "0.0.0.0:8080", "-t", "/app/admin", "/app/admin/index.php"]
+    ports:
+      - "18080:8080"
+    volumes:
+      - ./menus.json:/app/menus.json
+      - ./admin:/app/admin:ro
+      - ./data:/app/data
+    environment:
+      - PHP_CLI_SERVER_WORKERS=1
