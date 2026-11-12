@@ -1,0 +1,9 @@
+.env
+.env.*
+!.env.example
+data/
+media/*
+!media/.gitkeep
+*.log
+.DS_Store
+Thumbs.db
