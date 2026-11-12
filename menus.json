@@ -1,0 +1,65 @@
+{
+    "pages": {
+        "home": {
+            "title": "🤖 菜单助手",
+            "text": "欢迎使用，请选择下方功能：",
+            "buttons": [
+                {
+                    "label": "📋 功能示例",
+                    "page": "features"
+                },
+                {
+                    "label": "📖 使用指南",
+                    "page": "guide"
+                },
+                {
+                    "label": "ℹ️ 关于",
+                    "reply": "about"
+                }
+            ]
+        },
+        "features": {
+            "title": "📋 功能示例",
+            "text": "支持多级菜单、文字回复和外部链接。",
+            "buttons": [
+                {
+                    "label": "💬 文字回复",
+                    "reply": "example"
+                },
+                {
+                    "label": "🔗 外部链接示例",
+                    "url": "https://example.com"
+                },
+                {
+                    "label": "↩️ 返回首页",
+                    "page": "home"
+                }
+            ]
+        },
+        "guide": {
+            "title": "📖 使用指南",
+            "text": "在管理后台编辑菜单后，点击「发布更新」。",
+            "buttons": [
+                {
+                    "label": "🚀 快速开始",
+                    "reply": "quick_start"
+                },
+                {
+                    "label": "↩️ 返回首页",
+                    "page": "home"
+                }
+            ]
+        }
+    },
+    "replies": {
+        "about": {
+            "text": "ℹ️ Telegram 菜单助手\n这是通用示例内容，可在后台替换为自己的介绍。"
+        },
+        "example": {
+            "text": "💬 这是一条示例自动回复。可在后台设置文字以及图片、视频或文档文件名。"
+        },
+        "quick_start": {
+            "text": "🚀 发送 /start 打开首页。\n在后台编辑并发布后，再次发送 /start 查看最新菜单。"
+        }
+    }
+}
